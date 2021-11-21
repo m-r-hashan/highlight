@@ -1,52 +1,56 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interest includes infectious diseases, modelling based approach
+in public health, non-communicable diseases and the interlink between NCDs and IDs
+I am also involved with secondary data based research and evidence synthesis through
+systematic review and meta-analysis on potential topic of medicine, public health.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: PhD in Infectious disease
+    institution: Central Queensland University
+    year: started on 2020
+  - course: MB,BS
+    institution: Dhaka Medical College
+    year: 2014
+
+email: "hasandmck66@gmail.com"
 highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Infectious diseases
+- Non-communicable diseases
+- Systematic review and Meta-analysis
+- Secondary database projects
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Central Queensland University
+  url: https://www.cqu.edu.au/
+role: PhD student
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:hasandmck66@gmail.com
 - display:
     header: true
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/M_R_Hashan
 - icon: graduation-cap
   icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-- icon: github
+  link: https://scholar.google.com/citations?user=53hqnCcAAAAJ&hl=en
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0002-1627-4976
+- icon: facebook
   icon_pack: fab
-  link: https://github.com/gcushen
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.facebook.com/mdrashidul.hasan.9/
 superuser: true
-title: Alice Bighetti (吳恩達)
+title: Mohammad Rashidul Hashan
 ---
 
-Alice Bighetti is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Mohammad Rashidul Hashan is a physician by training and currently working as Medical
+officer with the Ministry of Health and Family Welfare, Government of Bangladesh.
+He has strong interest in clinical and public health research. Currently, Hashan is
+trying to decipher strategies to mitigate the burden of vaccine preventable infectious diseases as a PhD student with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. HSRM network is his brain child which conducts project based research to provide hands-on support for any devoted research enthusiast.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I consider myself as a lifelong learner and believe in equity and equality. If you do not find me doing any of these above, perhaps I am enjoying nature somewhere in this planet.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
