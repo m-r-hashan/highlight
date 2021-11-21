@@ -1,8 +1,7 @@
 ---
 bio: My research interest includes infectious diseases, modelling based approach
 in public health, non-communicable diseases and the interlink between NCDs and IDs
-I am also involved with secondary data based research and evidence synthesis through
-systematic review and meta-analysis on potential topic of medicine, public health.
+
 education:
   courses:
   - course: PhD in Infectious disease
@@ -46,10 +45,7 @@ superuser: true
 title: Mohammad Rashidul Hashan
 ---
 
-Mohammad Rashidul Hashan is a physician by training and currently working as Medical
-officer with the Ministry of Health and Family Welfare, Government of Bangladesh.
-He has strong interest in clinical and public health research. Currently, Hashan is
-trying to decipher strategies to mitigate the burden of vaccine preventable infectious diseases as a PhD student with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. HSRM network is his brain child which conducts project based research to provide hands-on support for any devoted research enthusiast.
+Mohammad Rashidul Hashan is a physician by training and currently working as Medical officer with the Ministry of Health and Family Welfare, Government of Bangladesh.He has strong interest in clinical and public health research. Currently, Hashan is trying to decipher strategies to mitigate the burden of vaccine preventable infectious diseases as a PhD student with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. HSRM network is his brain child which conducts project based research to provide hands-on support for any devoted research enthusiast.
 
 I consider myself as a lifelong learner and believe in equity and equality. If you do not find me doing any of these above, perhaps I am enjoying nature somewhere in this planet.
 
