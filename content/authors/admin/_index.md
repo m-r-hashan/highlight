@@ -1,16 +1,14 @@
 ---
-bio: My research interest includes infectious diseases, modelling based approach
-in public health, non-communicable diseases and the interlink between NCDs and IDs
-
+bio: "My research interest includes infectious diseases, non-communicable 
+diseases and statistical modelling based approach."
 education:
   courses:
-  - course: PhD in Infectious disease
-    institution: Central Queensland University
+  - course: PhD student (Infectious disease)
+    institution: Central Queensland University, Australia
     year: started on 2020
-  - course: MB,BS
-    institution: Dhaka Medical College
+  - course: Bachelor of Medicine and Bachelor of Surgery (MB,BS)
+    institution: Dhaka Medical College, Dhaka, Bangladesh
     year: 2014
-
 email: "hasandmck66@gmail.com"
 highlight_name: true
 interests:
@@ -38,15 +36,22 @@ social:
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0002-1627-4976
-- icon: facebook
+- icon: facebook-square
   icon_pack: fab
   link: https://www.facebook.com/mdrashidul.hasan.9/
+
 superuser: true
 title: Mohammad Rashidul Hashan
 ---
+Mohammad Rashidul Hashan is a physician by training and 
+currently working as medical officer with the Ministry of Health and 
+Family Welfare, Government of Bangladesh. He has strong interest in clinical 
+and public health research. Currently, Hashan is trying to decipher strategies 
+to mitigate the burden of vaccine preventable infectious diseases as a PhD 
+student with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. 
+HSRM network is his brain child which conducts project based research to 
+provide hands-on support for any devoted research enthusiast.
+I consider myself as a lifelong learner and believe in equity and equality.
+If you do not find me doing any of these above, perhaps I am enjoying 
+nature somewhere in this planet.
 
-Mohammad Rashidul Hashan is a physician by training and currently working as Medical officer with the Ministry of Health and Family Welfare, Government of Bangladesh.He has strong interest in clinical and public health research. Currently, Hashan is trying to decipher strategies to mitigate the burden of vaccine preventable infectious diseases as a PhD student with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. HSRM network is his brain child which conducts project based research to provide hands-on support for any devoted research enthusiast.
-
-I consider myself as a lifelong learner and believe in equity and equality. If you do not find me doing any of these above, perhaps I am enjoying nature somewhere in this planet.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
