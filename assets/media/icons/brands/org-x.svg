@@ -1,15 +1,23 @@
-<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <g>
-  <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="58" width="58" y="-1" x="-1"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-  </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <path stroke="#000" id="svg_2" d="m0.5,28l11.78572,-23.57143l31.42857,0l11.78571,23.57143l-11.78571,23.57143l-31.42857,0l-11.78572,-23.57143z" stroke-width="2" fill="#fff"/>
-  <text transform="matrix(1,0,0,1,0,0) " style="cursor: text;" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Montserrat Black'" font-size="30" id="svg_1" y="38.75" x="16.57031" stroke-width="0" stroke="#000" fill="#000000">X</text>
- </g>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M485 1467 c-339 -138 -400 -165 -400 -182 0 -17 61 -45 400 -182 220
+-89 408 -162 418 -162 10 -1 192 69 404 155 212 85 395 154 407 152 20 -3 21
+-8 24 -181 2 -177 2 -179 -22 -208 -35 -41 -61 -119 -81 -235 -20 -121 -18
+-148 12 -152 25 -4 25 -5 42 130 6 48 19 111 29 140 l17 53 3 -146 c2 -115 6
+-150 17 -159 12 -10 18 -10 30 0 12 10 15 42 16 159 l0 146 20 -55 c11 -30 25
+-98 31 -150 12 -99 25 -127 53 -116 15 5 16 15 10 64 -19 162 -60 291 -104
+329 -20 17 -21 27 -21 206 0 186 0 188 -25 212 -13 14 -30 25 -38 25 -7 0
+-192 72 -411 160 -219 88 -405 160 -414 159 -9 0 -197 -73 -417 -162z m480
+-101 c86 -36 70 -139 -25 -166 -71 -20 -150 26 -150 87 0 72 92 113 175 79z"/>
+<path d="M300 814 l0 -305 25 -25 c65 -65 229 -102 490 -111 198 -6 358 5 492
+37 95 22 177 61 193 90 7 12 9 123 8 319 l-3 299 -244 -99 c-134 -54 -270
+-108 -301 -120 l-58 -21 -252 102 c-138 55 -274 110 -301 120 l-49 20 0 -306z"/>
+</g>
 </svg>
