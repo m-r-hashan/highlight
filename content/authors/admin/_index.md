@@ -51,6 +51,6 @@ to mitigate the burden of vaccine preventable infectious diseases with the Centr
 HSRM network is his brain child which conducts project based research to 
 provide hands-on support for any devoted research enthusiast.
 I consider myself as a lifelong learner and believe in equity and equality.
-If you do not find me doing any of these above, perhaps I am enjoying 
+If you do not find him doing any of these above, perhaps he is enjoying 
 nature somewhere in this planet.
 
