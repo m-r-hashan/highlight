@@ -1,0 +1,264 @@
+---
+title: "R for data science"
+author: "Mohammad Rashidul Hashan"
+date: "1/23/2022"
+output: html_document
+---
+
+<script src="R for data science_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="r-markdown" class="section level3">
+<h3>R Markdown</h3>
+<p>This R Markdown document contains my learning sessions from the great book <strong><em>R for data science</em></strong> by Hadley Wickham and Garret Garelmund. I will read the whole book phase by phase and weekly practice session. All those practice sessions will be documented here to keep track of the contents I have learnt so far. Bear with me….you’ll be happy to gain a new skill sets to work with R.</p>
+</div>
+<div id="chapter-1" class="section level3">
+<h3>Chapter 1</h3>
+<div id="data-visualization-and-ggplot2" class="section level4">
+<h4>Data visualization and ggplot2</h4>
+<div id="load-packages-install-and-load-the-packages" class="section level5">
+<h5>load packages: install and load the packages</h5>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+<div id="exercise" class="section level4">
+<h4>Exercise</h4>
+<p><strong>Question 1:</strong> Run ggplot(data = mpg). What do you see?- So, it basically shows nothing on the graph because we have not actually put any data on coordinate there. Its the first layer of the ggplot2 graph.</p>
+<pre class="r"><code>ggplot(data = mpg)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><strong>Question 2:</strong> How many rows are in mtcars? How many columns?</p>
+<pre class="r"><code>str(mpg)</code></pre>
+<pre><code>## tibble [234 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ manufacturer: chr [1:234] &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; ...
+##  $ model       : chr [1:234] &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; ...
+##  $ displ       : num [1:234] 1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : int [1:234] 1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+##  $ cyl         : int [1:234] 4 4 4 4 6 6 6 4 4 4 ...
+##  $ trans       : chr [1:234] &quot;auto(l5)&quot; &quot;manual(m5)&quot; &quot;manual(m6)&quot; &quot;auto(av)&quot; ...
+##  $ drv         : chr [1:234] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; ...
+##  $ cty         : int [1:234] 18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int [1:234] 29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : chr [1:234] &quot;p&quot; &quot;p&quot; &quot;p&quot; &quot;p&quot; ...
+##  $ class       : chr [1:234] &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; ...</code></pre>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;~
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, &quot;~
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2.~
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 200~
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, ~
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;auto~
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4~
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, 1~
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, 2~
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p~
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;c~</code></pre>
+<pre class="r"><code>view(mpg)</code></pre>
+<p><strong>Question 3:</strong> What does the drv variable describe? Read the help for ?mpg to find out</p>
+<p><strong>Question 4:</strong> Make a scatterplot of hwy versus cyl</p>
+<pre class="r"><code>ggplot(data = mpg) + geom_point(mapping = aes(x = hwy, y = cyl))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><strong>Question 5:</strong> What happens if you make a scatterplot of class versus drv? Why is the plot not useful? - Both the class (typ of care) &amp; drv (the type of drive train) are character variables. So no meaningful relationship is identifiable on a scatterplot between these 2 variables</p>
+<pre class="r"><code>ggplot(data = mpg) + geom_point(mapping = aes(x = class, y = drv))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><strong>Question 6:</strong> What’s gone wrong with this code? Why are the points not blue? - Because color was applied within the aesthetic, so it applied another layer instead of putting color on each data points</p>
+<pre class="r"><code>ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy, color = &quot;blue&quot;))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><strong>Question 7:</strong> Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset.) How can you see this information when you run mpg?</p>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;~
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, &quot;~
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2.~
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 200~
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, ~
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;auto~
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4~
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, 1~
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, 2~
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p~
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;c~</code></pre>
+<p><strong>Question 8:</strong> Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical versus continuous variables?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = cty))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = cty))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))</code></pre>
+<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-8-4.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))</code></pre>
+<pre><code>## Warning: The shape palette can deal with a maximum of 6 discrete values because
+## more than 6 becomes difficult to discriminate; you have 7. Consider
+## specifying shapes manually if you must have them.</code></pre>
+<pre><code>## Warning: Removed 62 rows containing missing values (geom_point).</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-8-5.png" width="672" /></p>
+<p><strong>Question 9:</strong> What happens if you map the same variable to multiple aesthetics?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = hwy))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><strong>Question 10:</strong> What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point.)</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy),
+             shape = 23, color = &quot;black&quot;, fill = &quot;yellow&quot;, 
+             size = 4, stroke = 1.5)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><strong>Question 11:</strong> What happens if you map an aesthetic to something other than a variable name, like aes(color = displ &lt; 5)</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = displ &lt; 5))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><strong>Question 12:</strong> What happens if you facet on a continuous variable?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ cty, nrow = 2)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><strong>Question 13:</strong> What do the empty cells in a plot with facet_grid(drv ~ cyl) mean? How do they relate to this plot?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><strong>Question 14:</strong> What plots does the following code make? What does . do?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ .)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(. ~ cyl)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+<p><strong>Question 15:</strong> What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><strong>Question 16:</strong> Read ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol variables?</p>
+<p><strong>Question 17:</strong> When using facet_grid() you should usually put the variable with more unique levels in the columns. Why?</p>
+<p><strong>Question 18:</strong> What geom would you use to draw a line chart? A boxplot? A histogram? An area chart? - To draw a line chart geom_line would be a good choice</p>
+<p><strong>Question 19:</strong> Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions:</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><strong>Question 20:</strong> What does show.legend = FALSE do? What happens if you remove it? Why do you think I used it earlier in the chapter?</p>
+<p><strong>Question 21:</strong> What does the se argument to geom_smooth() do? - It shows the confidence interval of the estimate in the display</p>
+<p><strong>Question 22:</strong> Will these two graphs look different? Why/why not? - No, the figures will look the same. Because, first example puts aesthetic within the ggplot and the second example puts within each geom for the aesthetic separately. But, they do have the same variable and dataset to display on the figure.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>ggplot() + geom_point(data = mpg,mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-17-2.png" width="672" /></p>
+<p><strong>Question 23:</strong> Re-create the R code necessary to generate the following graphs.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(size = 0.5), show.legend = FALSE) + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(size = 0.5), show.legend = FALSE) + 
+  geom_smooth(mapping = aes(group = drv), se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = drv, size = 0.5), show.legend = TRUE) + 
+  geom_smooth(mapping = aes(color = drv), se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = drv, size = 0.5), show.legend = TRUE) +   
+  geom_smooth(mapping = aes(color = drv), se = FALSE, show.legend = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-4.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = drv, size = 0.5), show.legend = TRUE) + 
+  geom_smooth(mapping = aes(color = drv, linetype = drv), se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-5.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = drv, size = 0.5), show.legend = TRUE)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-18-6.png" width="672" /></p>
+</div>
+<div id="statistical-transformation" class="section level4">
+<h4>Statistical transformation</h4>
+<p><strong>Question 24:</strong> What is the default geom associated with stat_summary()? How could you rewrite the previous plot to use that geom function instead of the stat function?</p>
+<p><strong>Question 25:</strong> What does geom_col() do? How is it different to geom_bar()?</p>
+<p><em>Answer:</em> geom_col() displays each of the value of x variables on the y axis. Whereas geom_bar() displays the count estimate of x variable parameter.</p>
+<p><strong>Question 26:</strong> Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?</p>
+<p><em>Answer:</em></p>
+<p><strong>Question 27:</strong> What variables does stat_smooth() compute? What parameters control its behavior?</p>
+<p><em>Answer:</em><br />
+<strong>Question 28:</strong> In our proportion bar chart, we need to set group = 1. Why? In other words what is the problem with these two graphs?</p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop..)) </code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = color, y = ..prop..))</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
+</div>
+<div id="position-adjustments" class="section level4">
+<h4>Position adjustments</h4>
+<p><strong>Question 29:</strong> What is the problem with this plot? How could you improve it?</p>
+<p><em>Answer:</em></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point()</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point(position = &#39;jitter&#39;)</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-20-2.png" width="672" /></p>
+<p><strong>Question 30:</strong> What parameters to geom_jitter() control the amount of jittering?</p>
+<p><em>Answer:</em></p>
+<p><strong>Question 31:</strong> Compare and contrast geom_jitter() with geom_count().</p>
+<p><em>Answer:</em><br />
+<strong>Question 32:</strong> What’s the default position adjustment for geom_boxplot()? Create a visualization of the mpg dataset that demonstrates it.</p>
+</div>
+<div id="answer" class="section level4">
+<h4><em>Answer:</em></h4>
+<p>Coordinate systems</p>
+<p><strong>Question 33:</strong> Turn a stacked bar chart into a pie chart using coord_polar()</p>
+<pre class="r"><code>bar &lt;- ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity))
+
+bar + coord_polar()</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><strong>Question 34:</strong> What does labs() do? Read the documentation.</p>
+<p><em>Answer:</em> It gives the option to put legend of the figure.<br />
+<strong>Question 35:</strong> What’s the difference between coord_quickmap() and coord_map()?<br />
+<em>Answer:</em></p>
+<p>Question 36:What does the following plot tell you about the relationship between city and highway mpg? Why is coord_fixed() important? What does geom_abline() do?</p>
+<p><em>Answer:</em></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point() + 
+  geom_abline() + 
+  coord_fixed()</code></pre>
+<p><img src="/post/2020-12-01-r-rmarkdown/R%20for%20data%20science_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+</div>
+<div id="chapter-2" class="section level3">
+<h3>Chapter 2</h3>
+<div id="workflow-basics" class="section level4">
+<h4>Workflow: Basics</h4>
+</div>
+</div>
