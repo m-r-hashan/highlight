@@ -43,5 +43,5 @@ social:
 superuser: true
 title: Mohammad Rashidul Hashan
 ---
-আমি রাশিদুল হাসান.
+Hello, I am a physician by profession | Researcher by passion | Traveller by addition | Data enthusiast and machine learner novice by aspiration | Voracious reader in evolution | Keen listener as a fellow pedestrian.
 
