@@ -44,4 +44,4 @@ superuser: true
 title: Mohammad Rashidul Hashan
 ---
 
-**Hello!!** Very welcome from a *Physician* by profession \|\| *Researcher* by passion \|\| *Traveller* by addiction \|\| *Data enthusiast* and *Machine Learner* novice by aspiration \|\| Voracious *Reader* in evolution \|\| Keen *Listener* being a fellow *Pedestrian*.
+**Hello!!** Very welcome from a *Physician* by profession \|\| *Public Health Researcher* by passion \|\| *Traveller* by addiction \|\| *Data enthusiast* and *Machine Learner* novice by aspiration \|\| Voracious *Reader* in evolution \|\| Keen *Listener* being a fellow *Pedestrian*.
