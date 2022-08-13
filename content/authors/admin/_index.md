@@ -43,14 +43,5 @@ social:
 superuser: true
 title: Mohammad Rashidul Hashan
 ---
-Mohammad Rashidul Hashan is a physician by training and 
-currently working as medical officer with the Ministry of Health and 
-Family Welfare, Government of Bangladesh. He has strong interest in clinical 
-and public health research. Currently, Hashan is trying to decipher strategies 
-to mitigate the burden of vaccine preventable infectious diseases with the Central Queensland University, Australia. He is highly interested in research collaboration and open to suggestion and potential ideas. 
-HSRM network is his brain child which conducts project based research to 
-provide hands-on support for any devoted research enthusiast.
-I consider myself as a lifelong learner and believe in equity and equality.
-If you do not find him doing any of these above, perhaps he is enjoying 
-nature somewhere in this planet.
+আমি রাশিদুল হাসান.
 
