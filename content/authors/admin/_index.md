@@ -43,5 +43,5 @@ social:
 superuser: true
 title: Mohammad Rashidul Hashan
 ---
-Hello!! Very welcome from a physician by profession | Researcher by passion | Traveller by addiction | Data enthusiast and machine learner novice by aspiration | Voracious reader in evolution | Keen listener as a fellow pedestrian.
 
+**Hello!!** Very welcome from a *Physician* by profession \|\| *Researcher* by passion \|\| *Traveller* by addiction \|\| *Data enthusiast* and *Machine Learner* novice by aspiration \|\| Voracious *Reader* in evolution \|\| Keen *Listener* being a fellow *Pedestrian*.
