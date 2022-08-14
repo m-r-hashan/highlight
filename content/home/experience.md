@@ -38,7 +38,10 @@ experience:
     location: Nagasaki, Japan
     date_start: '2015-10-01'
     date_end: '2020-09-08'
-    description: ""
+    description: >-
+              * Systematic reviewer
+              * Data analysis
+              * Manuscript writing
 
   - title: Medical Officer
     company: International Centre for Diarrheal Disease and Research (icddr,b)
